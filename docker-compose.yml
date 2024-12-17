@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  next-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9210:9210"
+    volumes:
+      - .:/app
+    environment:
+      PORT: "9210"
+    restart: unless-stopped
